@@ -232,8 +232,11 @@ def make_index_inv(docs):
     # Se retorna el índice invertido ordenado por las palabras
     return dict(sorted(indice_invertido.items()))
 
-def get_binary_vector (doc):
+def get_binary_vector (docs, vocab_map, indice_inv):
     '''
     Función obtiene vector binario a partir de un tf 
     '''
-    return np.array([1 if val != 0 else 0 for val in doc])
+    bin_vector = np.zeros((len(docs),len(vocab_map)), dtype=int) #mat se almacena el vector binario
+    for key, docs in indice_inv.items():
+        bin_vector[docs, [vocab_map[key]]] = 1
+    return bin_vector
