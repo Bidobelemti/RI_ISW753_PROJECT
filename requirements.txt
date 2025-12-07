@@ -3,4 +3,4 @@ pandas
 nltk
 numpy
 scipy
-sklearn
+scikit-learn
