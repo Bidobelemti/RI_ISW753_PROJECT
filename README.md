@@ -18,9 +18,9 @@ El proyecto está construido en **Python 3**.
 
 ### Dependencias
 El código hace uso de `pandas`, `numpy` y `scipy`. Para instalar todo lo necesario rjecuta el comando de instalación:
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 ## 📂 Configuración del Dataset
 
