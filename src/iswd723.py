@@ -96,22 +96,34 @@ def jaccard_similarity(vec1, vec2):
 # Modelo TFIDF
 
 def get_tf(doc, vocab, vocab_len):
+
     """
-    Calcula Term Frequency (TF) de un documento.
+    Calcula el vector TF normalizado de un documento.
+    Ignora automáticamente las palabras que no están en el vocabulario.
+    
+    Parámetros:
+        doc (str)        : documento crudo
+        vocab (dict)     : diccionario {termino: indice}
+        vocab_len (int)  : tamaño del vocabulario
+    
+    Retorna:
+        np.ndarray de tamaño vocab_len con los valores TF.
     """
     tokens = doc.split()
     doc_len = len(tokens)
-    
+
+    # Documento vacío
     if doc_len == 0:
-        return np.zeros(vocab_len)
-        
-    tf_vec = np.zeros(vocab_len)
+        return np.zeros(vocab_len, dtype=float)
+
+    tf_vec = np.zeros(vocab_len, dtype=float)
     token_counts = Counter(tokens)
-    
+
     for term, count in token_counts.items():
-        if term in vocab:
-            tf_vec[vocab[term]] = count / doc_len
-    
+        idx = vocab.get(term)    # None si no existe
+        if idx is not None:      # Solo se asignan términos del vocabulario
+            tf_vec[idx] = count / doc_len
+
     return tf_vec
 
 def get_df(tf):
