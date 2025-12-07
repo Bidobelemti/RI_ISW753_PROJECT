@@ -5,7 +5,7 @@ import os
 
 from scipy.sparse import csr_matrix
 
-from src.iswd723 import (
+from iswd753 import (
     clean_text, remove_stopwords, stemming, filter_tokens,
     build_vocabulary, jaccard_similarity, get_tf, get_df, get_idf, 
     get_tfidf, calculate_cos_similarity, avgdl, basic_index, idf_rsj,
@@ -226,7 +226,7 @@ def evaluate_model(model, queries, qrels, K=10):
         aps.append(ap)
         precisions.append(p)
         recalls.append(r)
-
+    #para los 10 elementos retornados
     return {
         "MAP": np.mean(aps),
         "Precision@K": np.mean(precisions),

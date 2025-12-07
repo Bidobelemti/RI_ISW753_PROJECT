@@ -4,7 +4,7 @@ import random
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
 
-from iswd723 import clean_text, remove_stopwords, stemming, filter_tokens
+from iswd753 import clean_text, remove_stopwords, stemming, filter_tokens
 
 # ===================================================================
 # 1) CARGA Y PREPROCESAMIENTO — IGUAL QUE TU SISTEMA IR

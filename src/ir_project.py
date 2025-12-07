@@ -3,7 +3,7 @@ import numpy as np
 import sys
 import os # Importar sys y os para la ejecución CLI y manejo de archivos
 
-from src.iswd723 import (
+from iswd753 import (
     clean_text, remove_stopwords, stemming, filter_tokens,
     build_vocabulary, jaccard_similarity, get_tf, get_df, get_idf, 
     get_tfidf, calculate_cos_similarity, avgdl, basic_index, idf_rsj,
