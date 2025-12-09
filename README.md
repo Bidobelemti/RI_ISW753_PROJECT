@@ -5,6 +5,7 @@ Este proyecto implementa un motor de búsqueda y recuperación de información b
 ## Integrantes
 * **Morales Mauricio**
 * **Rivadeneira Jossue**
+* [URL Video e informe](https://epnecuador-my.sharepoint.com/my?id=%2Fpersonal%2Fbryan%5Fmorales06%5Fepn%5Fedu%5Fec%2FDocuments%2FRI%5FPROYECTO%5F2025B%5FBIM1)
 
 ## Características
 El sistema implementa los siguientes modelos de recuperación:
@@ -27,7 +28,7 @@ pip install -r requirements.txt
 Para que el sistema funcione, es **obligatorio** descargar el dataset de noticias.
 
 1. Descarga el archivo `bbc_news.csv` desde Kaggle:
-    * 🔗 [BBC News Dataset - Kaggle](https://www.kaggle.com/datasets/gpreda/bbc-news)
+    * [BBC News Dataset - Kaggle](https://www.kaggle.com/datasets/gpreda/bbc-news)
 2. Crea una carpeta llamada `data` en la raíz del proyecto.
 3. Coloca el archivo descargado dentro de esa carpeta.
 
